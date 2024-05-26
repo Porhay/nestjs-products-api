@@ -38,7 +38,7 @@ Task requirements can be found [here](REQUIREMENTS)
 - 🐳 **Docker** - Container Application Development
 - 📏 **ESLint** — Pluggable JavaScript linter
 - 📃 **Swagger** - API Documentation
-- 🔨 **Mocha** - API Testing
+- 🔨 **Jest** - API Testing
 
 
 ## 🏃 Run locally
@@ -51,7 +51,7 @@ Task requirements can be found [here](REQUIREMENTS)
 ###### 2. Start Docker Desktop
 ###### 3. Run commands from the root directory:
 ```sh
-$ docker-compose -f docker-compose.yml up -d postgresql
+$ npm run start:db
 $ npm run start:dev
 ```
 </details>
@@ -60,7 +60,6 @@ $ npm run start:dev
 ```sh
 $ npm run typeorm:create-migration --name=migration_name
 ```
-
 
 
 ## 📃 License
