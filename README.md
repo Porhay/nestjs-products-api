@@ -27,6 +27,12 @@ Task requirements can be found [here](REQUIREMENTS)
 ## ✅ Check it out: https://nestjs-products-api.onrender.com
 ###### ▶ (note that app use free instance that spins down with inactivity that can delay first request by 50+ seconds)
 
+## 🧩 Docs (Swagger)
+###### Could be found by next URL:
+```sh
+$ http://localhost:8001/ # Local environment
+$ https://nestjs-products-api.onrender.com # Production
+```
 
 ## 🚀 Features
 - 📱 **NestJS** — latest version

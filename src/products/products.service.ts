@@ -1,7 +1,7 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
-import { Products } from './entities/products.entity';
+import { Product } from './entities/products.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
@@ -10,14 +10,14 @@ export class ProductsService {
   private readonly logger: Logger = new Logger(ProductsService.name);
 
   constructor(
-    @InjectRepository(Products)
-    private readonly productsRepository: Repository<Products>,
+    @InjectRepository(Product)
+    private readonly productsRepository: Repository<Product>,
   ) {}
 
   async create(
     createProductDto: CreateProductDto,
-  ): Promise<{ id: Products['id'] }> {
-    const product = new Products(createProductDto);
+  ): Promise<{ id: Product['id'] }> {
+    const product = new Product(createProductDto);
     await this.productsRepository.save(product);
     this.logger.log(`New product created, id: ${product.id}`);
     return { id: product.id };

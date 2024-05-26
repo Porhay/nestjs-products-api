@@ -1,6 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
-import { Products } from 'src/products/entities/products.entity';
+import { Product } from 'src/products/entities/products.entity';
+import { User } from 'src/users/entities/user.entity';
 import { DataSource } from 'typeorm';
 
 config();
@@ -11,5 +12,5 @@ export default new DataSource({
   type: 'postgres',
   url: configService.getOrThrow('DATABASE_URL'),
   migrations: ['migrations/**'],
-  entities: [Products],
+  entities: [Product, User],
 });
