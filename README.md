@@ -27,6 +27,12 @@ Task requirements can be found [here](REQUIREMENTS)
 ## ✅ Check it out: https://nestjs-products-api.onrender.com
 ###### ▶ (note that app use free instance that spins down with inactivity that can delay first request by 50+ seconds)
 
+## 🧩 Docs (Swagger)
+###### Could be found by next URL:
+```sh
+$ http://localhost:8001/ # Local environment
+$ https://nestjs-products-api.onrender.com # Production
+```
 
 ## 🚀 Features
 - 📱 **NestJS** — latest version
@@ -38,7 +44,7 @@ Task requirements can be found [here](REQUIREMENTS)
 - 🐳 **Docker** - Container Application Development
 - 📏 **ESLint** — Pluggable JavaScript linter
 - 📃 **Swagger** - API Documentation
-- 🔨 **Mocha** - API Testing
+- 🔨 **Jest** - API Testing
 
 
 ## 🏃 Run locally
@@ -51,7 +57,7 @@ Task requirements can be found [here](REQUIREMENTS)
 ###### 2. Start Docker Desktop
 ###### 3. Run commands from the root directory:
 ```sh
-$ docker-compose -f docker-compose.yml up -d postgresql
+$ npm run start:db
 $ npm run start:dev
 ```
 </details>
@@ -60,7 +66,6 @@ $ npm run start:dev
 ```sh
 $ npm run typeorm:create-migration --name=migration_name
 ```
-
 
 
 ## 📃 License
