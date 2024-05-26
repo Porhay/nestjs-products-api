@@ -15,15 +15,13 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto): Promise<User> {
     const user = this.usersRepository.create(createUserDto);
-    return this.usersRepository.save(user);
+    const savedUser = await this.usersRepository.save(user);
+    this.logger.log(`New user created, id: ${savedUser.id}`);
+    return savedUser;
   }
 
   async findOne(username: string): Promise<User | undefined> {
     return this.usersRepository.findOne({ where: { username } });
-  }
-
-  async findAll() {
-    return this.usersRepository.find();
   }
 
   async update(userId: string, updateUserDto: UpdateUserDto): Promise<User> {

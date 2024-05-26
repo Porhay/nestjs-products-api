@@ -12,12 +12,18 @@ export class AuthService {
   ) {}
 
   async register(createUserDto: CreateUserDto) {
+    // create user in db
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
     const user = await this.usersService.create({
       ...createUserDto,
       password: hashedPassword,
     });
-    return user;
+
+    // generate jwt token
+    const payload = { username: user.username, sub: user.id };
+    const accessToken = this.jwtService.sign(payload);
+
+    return { access_token: accessToken };
   }
 
   async validateUser(username: string, pass: string): Promise<any> {
