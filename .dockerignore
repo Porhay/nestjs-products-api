@@ -2,7 +2,6 @@ data
 node_modules
 build
 .git
-dist
 
 **/*.log
 **/*.md
@@ -28,5 +27,4 @@ dist
 helm/
 
 **/.next/
-**/dist/
 **/var/
