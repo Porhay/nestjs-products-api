@@ -1,8 +1,8 @@
-
-# -- [Nest.js] --
+data
 node_modules
 build
 .git
+dist
 
 **/*.log
 **/*.md

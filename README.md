@@ -56,6 +56,12 @@ $ npm run start:dev
 ```
 </details>
 
+## 🔨 Database migrations
+```sh
+$ npm run typeorm:create-migration --name=migration_name
+```
+
+
 
 ## 📃 License
 Project is [MIT licensed](LICENSE)
