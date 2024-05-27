@@ -91,6 +91,9 @@ curl --location 'https://nestjs-products-api.onrender.com/api/products' \
 $ npm run start:db
 $ npm run start:dev
 ```
+###### 4. Run tests (optional):
+```sh
+$ npm run test
 </details>
 
 ## 🔨 Database migrations
