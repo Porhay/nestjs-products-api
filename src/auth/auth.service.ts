@@ -21,7 +21,7 @@ export class AuthService {
     });
 
     // generate jwt token
-    const payload = { username: dbUser.username, sub: dbUser.id };
+    const payload = { username: dbUser.username, userId: dbUser.id };
     const accessToken = this.jwtService.sign(payload);
 
     return { access_token: accessToken };
@@ -37,7 +37,7 @@ export class AuthService {
   }
 
   async login(user: User) {
-    const payload = { username: user.username, sub: user.id };
+    const payload = { username: user.username, userId: user.id };
     return {
       access_token: this.jwtService.sign(payload),
     };
