@@ -34,6 +34,37 @@ $ http://localhost:8001/ # Local environment
 $ https://nestjs-products-api.onrender.com # Production
 ```
 
+## 🕺 Basic test case
+<details>
+<summary>Create a new user, add a new product and get all the products</summary>
+###### 1. Create a new user
+```sh
+curl --location 'https://nestjs-products-api.onrender.com/api/auth/register' \
+--header 'Content-Type: application/json' \
+--data '{
+    "username": "User1",
+    "password": "123"
+}'
+```
+###### 2. Add a new product
+```sh
+curl --location 'https://nestjs-products-api.onrender.com/api/products' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlVzZXIxIiwic3ViIjoiNDJiZGU1MjUtZTg3Ny00MGE3LTgyYzUtZmQyN2YzZTU2YjUzIiwiaWF0IjoxNzE2NzgyMTI0LCJleHAiOjE3MTY3ODU3MjR9.Y4qk5qipdaKaR4V6U8EKHFYZTZVH6o225L2W3mvVgZM' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "product11",
+    "description": "some product",
+    "price": 9.99,
+    "category": "general"
+}'
+```
+###### 3. Get all the products
+```sh
+curl --location 'https://nestjs-products-api.onrender.com/api/products' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRlbnlzMiIsInVzZXJJZCI6IjRjMjA2MTM3LWY3OGQtNDQ4Yi05N2NhLTY3YjVjY2MyNTg5NCIsImlhdCI6MTcxNjc4MTc3NSwiZXhwIjoxNzE2Nzg1Mzc1fQ.faPvkaGY1xp1gG9iuHSSgiSXuqBpbCHUGTm3VoE4vsw'
+```
+</details>
+
 ## 🚀 Features
 - 📱 **NestJS** — latest version
 - 🎉 **TypeScript** - Type checking
@@ -60,6 +91,9 @@ $ https://nestjs-products-api.onrender.com # Production
 $ npm run start:db
 $ npm run start:dev
 ```
+###### 4. Run tests (optional):
+```sh
+$ npm run test
 </details>
 
 ## 🔨 Database migrations
