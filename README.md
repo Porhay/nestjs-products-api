@@ -66,7 +66,7 @@ curl --location 'https://nestjs-products-api.onrender.com/api/products' \
 </details>
 
 ## 🚀 Features
-- 📱 **NestJS** — latest version
+- 📱 **NestJS** — Latest version
 - 🎉 **TypeScript** - Type checking
 - 🏪 **PostgreSQL** - Open-Source Relational Database
 - 💾 **TypeORM** - Database ORM
@@ -94,6 +94,7 @@ $ npm run start:dev
 ###### 4. Run tests (optional):
 ```sh
 $ npm run test
+```
 </details>
 
 ## 🔨 Database migrations
