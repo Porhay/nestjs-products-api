@@ -8,11 +8,7 @@ import { AuthService } from './auth.service';
 import { JwtModule, JwtService } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import {
-  ConflictException,
-  ExecutionContext,
-  UnauthorizedException,
-} from '@nestjs/common';
+import { ConflictException, ExecutionContext } from '@nestjs/common';
 import { LocalAuthGuard } from './local-auth.guard';
 
 const USER_1 = {
@@ -20,7 +16,7 @@ const USER_1 = {
   password: '123456',
 };
 
-describe('Controller', () => {
+describe('AuthController', () => {
   let userId: string;
   let authController: AuthController;
   let authService: AuthService;

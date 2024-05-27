@@ -4,7 +4,6 @@ import { CreateUserDto } from '../users/dto/create-user.dto';
 import { LocalAuthGuard } from './local-auth.guard';
 import { Request } from 'express';
 import { ApiBody, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { User } from 'src/users/entities/user.entity';
 
 @Controller('auth')
 @ApiTags('Auth')
